@@ -1,0 +1,19 @@
+{
+    "Users": [
+      {
+        "id": 1,
+        "name": "Jeam Alves",
+        "email": "jeam.alves@eadbox.com"
+      },
+      {
+        "id": 3,
+        "name": "Iago barboza",
+        "email": "iago.barboza@eadbox.com"
+      },
+      {
+        "id": 3,
+        "name": "Estevan Jantsk",
+        "email": "estevan.jantsk@eadbox.com"
+      }
+    ]
+}
