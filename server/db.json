@@ -3,17 +3,33 @@
       {
         "id": 1,
         "name": "Jeam Alves",
-        "email": "jeam.alves@eadbox.com"
+        "email": "jeam.alves@eadbox.com",
+        "password": ""
       },
       {
-        "id": 3,
+        "id": 2,
         "name": "Iago barboza",
-        "email": "iago.barboza@eadbox.com"
+        "email": "iago.barboza@eadbox.com",
+        "password": ""
       },
       {
         "id": 3,
         "name": "Estevan Jantsk",
-        "email": "estevan.jantsk@eadbox.com"
+        "email": "estevan.jantsk@eadbox.com",
+        "password": ""
+      }
+    ],
+    "Books": [
+      {
+        "id": 1,
+        "name": "Angular 6",
+        "abstract": "Técnicas de angular 6",
+        "cover": "https://images-na.ssl-images-amazon.com/images/I/51DtTy%2BIaRL._SX258_BO1,204,203,200_.jpg",
+        "userId": 2,
+        "loan": {
+        "userId": 1,
+        "date": "01/10/2018"
+        }
       }
     ]
 }
