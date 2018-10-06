@@ -1,0 +1,32 @@
+<form
+  id="form-container"
+  fxLayout="column"
+  fxLayoutGap="10px"
+>
+  <!-- Email -->
+  <mat-form-field>
+    <input
+      matInput
+      type="email" 
+      placeholder="Email"
+      [formControl]="formGroup.controls.email"
+    >
+    <mat-hint class="validator-error-message" *ngIf="formGroup.controls.email.hasError('email')">
+      <span>Email inválido</span>
+    </mat-hint>
+  </mat-form-field>
+
+  <!-- Password -->
+  <mat-form-field>
+  <input
+    matInput
+    type="password" 
+    placeholder="Senha"
+    [formControl]="formGroup.controls.password"
+  >
+  </mat-form-field>
+
+  <!-- Login Button -->
+  <button mat-raised-button (click)="onLoginButton()">LOGIN</button>
+</form>
+

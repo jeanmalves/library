@@ -4,19 +4,19 @@
         "id": 1,
         "name": "Jeam Alves",
         "email": "jeam.alves@eadbox.com",
-        "password": ""
+        "password": "123456"
       },
       {
         "id": 2,
         "name": "Iago barboza",
         "email": "iago.barboza@eadbox.com",
-        "password": ""
+        "password": "123456"
       },
       {
         "id": 3,
         "name": "Estevan Jantsk",
         "email": "estevan.jantsk@eadbox.com",
-        "password": ""
+        "password": "123456"
       }
     ],
     "Books": [
