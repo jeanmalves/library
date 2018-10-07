@@ -8,6 +8,7 @@ import { HttpModule } from '@angular/http';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RegistrationComponent } from './registration/registration.component';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ReactiveFormsModule
   ],
   declarations: [
-    LoginComponent
+    LoginComponent,
+    RegistrationComponent
   ],
   providers: [
     UserService

@@ -28,5 +28,18 @@ export class UserService {
     );
   }
 
+  create(name:String, email:String , password: String) {
+    return this.http.post(`http://localhost:3000/users`, {
+      name: name,
+      email: email,
+      password: password
+    })
+    .pipe(
+      tap(res => {
+        this.currentUser = res.json();
+        localStorage.setItem('currentUser', JSON.stringify(this.currentUser));
+      })
+    );
+  }
    
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import { UserService } from '../user.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'ead-login',
@@ -10,13 +11,12 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class LoginComponent {
 
-  // email: String;
-  // password: String;
   formGroup: FormGroup;
 
   constructor(
     private userService: UserService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router
   ) { 
     this.formGroup = this.formBuilder.group({
       email: [null, Validators.email],
@@ -35,6 +35,10 @@ export class LoginComponent {
         }
       });
     }
+  }
+
+  navigateToRegistration() {
+    this.router.navigateByUrl('/registration');
   }
 
 }
