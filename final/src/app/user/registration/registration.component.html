@@ -13,7 +13,7 @@
     >
     <mat-hint *ngIf="formGroup.controls.name.invalid">
       <span class="validator-error-message">
-        <div *ngIf="submitted && formGroup.controls.name.hasError('required')">Esse campo é obrigatório</div>
+        <div *ngIf="(submitted || formGroup.controls.name.touched) && formGroup.controls.name.hasError('required')">Esse campo é obrigatório</div>
       </span>
     </mat-hint>
   </mat-form-field>
@@ -28,8 +28,8 @@
     >
     <mat-hint *ngIf="formGroup.controls.email.invalid">
       <span class="validator-error-message">
-        <div *ngIf="submitted && formGroup.controls.email.hasError('required')">Esse campo é obrigatório</div>
-        <div *ngIf="submitted && formGroup.controls.email.hasError('email')">Email inválido</div>        
+        <div *ngIf="(submitted || formGroup.controls.email.touched) && formGroup.controls.email.hasError('required')">Esse campo é obrigatório</div>
+        <div *ngIf="(submitted || formGroup.controls.email.touched) && formGroup.controls.email.hasError('email')">Email inválido</div>        
       </span>
     </mat-hint>
   </mat-form-field>
@@ -44,7 +44,7 @@
     >
     <mat-hint *ngIf="formGroup.controls.password.invalid">
       <span class="validator-error-message">
-        <div *ngIf="submitted && formGroup.controls.password.hasError('required')">Esse campo é obrigatório</div>
+        <div *ngIf="(submitted || formGroup.controls.password.touched) && formGroup.controls.password.hasError('required')">Esse campo é obrigatório</div>
       </span>
     </mat-hint>
   </mat-form-field>
