@@ -3,9 +3,7 @@ import { Http } from '@angular/http';
 import { map } from 'rxjs/operators';
 import { UserService } from '../user/user.service';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class BookService {
 
   constructor(
