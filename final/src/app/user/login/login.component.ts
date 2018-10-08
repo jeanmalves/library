@@ -30,6 +30,7 @@ export class LoginComponent {
       .subscribe(() => {
         if (this.userService.currentUser) {
           alert('login realizado com sucesso');
+          this.router.navigateByUrl('/books');
         } else {
           alert('Email inválido ou senha incorreta!');
         }

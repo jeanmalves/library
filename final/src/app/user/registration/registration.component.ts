@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { UserService } from '../user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'ead-registration',
@@ -14,7 +15,8 @@ export class RegistrationComponent {
 
   constructor(
     private formBuilder: FormBuilder,
-    private userService: UserService
+    private userService: UserService,
+    private router: Router
   ) { 
     this.formGroup = this.formBuilder.group({
       name: [null, Validators.required],
@@ -34,6 +36,7 @@ export class RegistrationComponent {
       .subscribe(() => {
         if (this.userService.currentUser) {
           alert('Usuário criado com sucesso');
+          this.router.navigateByUrl('/books');
         } else {
           alert('Erro na criação do usuário');
         }
