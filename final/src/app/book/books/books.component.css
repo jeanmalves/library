@@ -1,0 +1,12 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 1e-9px;
+  overflow: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+ead-books-list {
+  margin: 0px 10px 0px 10px;
+}

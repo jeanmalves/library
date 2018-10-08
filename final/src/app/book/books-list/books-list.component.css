@@ -1,0 +1,27 @@
+:host {
+  height: 80%;
+}
+
+.books-list {
+  height: 100%;
+  border: 1px solid rgb(189, 189, 189);
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px 2px rgb(133, 133, 133);
+}
+
+.books-list .header {
+  font-size: 30px;
+  height: 70px;
+  border-bottom: 1px solid rgb(161, 161, 161);
+}
+
+.book {
+  height: 50px;
+  font-size: 20px;
+  border-bottom: 1px solid rgb(161, 161, 161);
+  cursor: pointer;
+}
+
+.book:hover {
+  background: rgb(199, 199, 199);
+}

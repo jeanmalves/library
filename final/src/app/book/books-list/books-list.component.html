@@ -1,0 +1,18 @@
+<!-- Books List "Meus Livros" -->
+<div
+  class="books-list"
+  fxLayout="column"
+  fxFlex="300px"
+>
+  <!-- Header -->
+  <div class="header" fxFlexLayout="row" fxLayoutAlign="center center">{{header}}</div>
+  <!-- Books -->
+  <div 
+    class="book" 
+    fxFlexLayout="row" 
+    fxLayoutAlign="center center"
+    *ngFor="let book of books"
+  >
+    {{book.name}}
+  </div>
+</div>

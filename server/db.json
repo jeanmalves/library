@@ -1,35 +1,81 @@
 {
-    "Users": [
-      {
-        "id": 1,
-        "name": "Jeam Alves",
-        "email": "jeam.alves@eadbox.com",
-        "password": "123456"
-      },
-      {
-        "id": 2,
-        "name": "Iago barboza",
-        "email": "iago.barboza@eadbox.com",
-        "password": "123456"
-      },
-      {
-        "id": 3,
-        "name": "Estevan Jantsk",
-        "email": "estevan.jantsk@eadbox.com",
-        "password": "123456"
-      }
-    ],
-    "Books": [
-      {
-        "id": 1,
-        "name": "Angular 6",
-        "abstract": "Técnicas de angular 6",
-        "cover": "https://images-na.ssl-images-amazon.com/images/I/51DtTy%2BIaRL._SX258_BO1,204,203,200_.jpg",
+  "Users": [
+    {
+      "id": 1,
+      "name": "Jeam Alves",
+      "email": "jeam.alves@eadbox.com",
+      "password": "123456"
+    },
+    {
+      "id": 2,
+      "name": "Iago barboza",
+      "email": "iago.barboza@eadbox.com",
+      "password": "123456"
+    },
+    {
+      "id": 3,
+      "name": "Estevan Jantsk",
+      "email": "estevan.jantsk@eadbox.com",
+      "password": "123456"
+    },
+    {
+      "name": null,
+      "email": "",
+      "password": "iirde!@#",
+      "id": 4
+    },
+    {
+      "name": "Iago barboza",
+      "email": "iagobarboza@gmail.com",
+      "password": "123456",
+      "id": 5
+    },
+    {
+      "name": "Mel",
+      "email": "mellyssa.tenorio@gmail.com",
+      "password": "123456",
+      "id": 6
+    },
+    {
+      "name": "teste",
+      "email": "teste@gmail.com",
+      "password": "1231231",
+      "id": 7
+    },
+    {
+      "name": "opa",
+      "email": "opa@gmail.com",
+      "password": "123123",
+      "id": 8
+    }
+  ],
+  "Books": [
+    {
+      "id": 1,
+      "name": "Senhor dos anéis I",
+      "userId": 2,
+      "loan": false
+    },
+    {
+      "id": 2,
+      "name": "Senhor dos anéis II",
+      "userId": 2,
+      "loan": false
+    },
+    {
+      "id": 3,
+      "name": "Senhor dos anéis III",
+      "userId": 1,
+      "loan": {
         "userId": 2,
-        "loan": {
-        "userId": 1,
-        "date": "01/10/2018"
-        }
+        "date": "07/10/2018"
       }
-    ]
+    },
+    {
+      "id": 4,
+      "name": "O Hobbit",
+      "userId": 1,
+      "loan": false
+    }
+  ]
 }

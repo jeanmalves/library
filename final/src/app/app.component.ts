@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { UserService } from './user/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'final';
+  
+  constructor(
+    private userService: UserService,
+    private router: Router
+  ) {
+    if(localStorage.currentUser) {  
+      this.userService.currentUser = JSON.parse(localStorage.currentUser);
+      this.router.navigateByUrl('/books');
+    } else {
+      this.router.navigateByUrl('/login');      
+    }
+  }
 }

@@ -1,0 +1,4 @@
+
+<ead-books-list *ngIf="myBooks" header="Meus Livros" [books]="myBooks"></ead-books-list>
+<ead-books-list *ngIf="booksIBorrowed" header="Livros que peguei" [books]="booksIBorrowed"></ead-books-list>
+<ead-books-list *ngIf="booksIBorrowed" header="Livros disponíveis" [books]="availableBooks"></ead-books-list>
