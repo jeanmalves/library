@@ -13,9 +13,11 @@ export class AppComponent {
     private userService: UserService,
     private router: Router
   ) {
-    if(localStorage.currentUser) {  
+    if(localStorage.currentUser) {
       this.userService.currentUser = JSON.parse(localStorage.currentUser);
-      this.router.navigateByUrl('/books');
+      if (window.location.pathname === '/') {
+        this.router.navigateByUrl('/books');
+      } 
     } else {
       this.router.navigateByUrl('/login');      
     }

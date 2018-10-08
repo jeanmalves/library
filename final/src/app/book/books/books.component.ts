@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BookService } from '../book.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'ead-books',
@@ -13,7 +14,8 @@ export class BooksComponent {
   availableBooks;
 
   constructor(
-    private bookService: BookService
+    private bookService: BookService,
+    private router: Router
   ) { 
     this.loadMyBooks();  
     this.loadBooksIBorrowed();
@@ -39,6 +41,10 @@ export class BooksComponent {
     .subscribe(books => {
       this.availableBooks = books;
     });
+  }
+
+  onCreateButton() {
+    this.router.navigateByUrl('/book-registration');
   }
 
 }

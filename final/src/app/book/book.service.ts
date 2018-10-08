@@ -31,4 +31,16 @@ export class BookService {
       map(res => res.json())
     );
   }
+
+  createBook(name, description) {  
+    return this.http.post('http://localhost:3000/books', {
+      name: name,
+      description: description,
+      userId: this.userService.currentUser.id,
+      loan: false
+    })
+    .pipe(
+      map(res => res.json())
+    );
+  }
 }

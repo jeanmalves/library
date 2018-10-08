@@ -2,3 +2,17 @@
 <ead-books-list *ngIf="myBooks" header="Meus Livros" [books]="myBooks"></ead-books-list>
 <ead-books-list *ngIf="booksIBorrowed" header="Livros que peguei" [books]="booksIBorrowed"></ead-books-list>
 <ead-books-list *ngIf="booksIBorrowed" header="Livros disponíveis" [books]="availableBooks"></ead-books-list>
+<button 
+  mat-fab
+  [ngStyle]="{
+    position: 'absolute',
+    'margin-left': '600px',
+    'margin-top': '400px',
+    'background': '#0ada79',
+    'color': 'white',
+    'font-size': '20px'
+  }"
+  (click)="onCreateButton()"
+>
+  +
+</button>

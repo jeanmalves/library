@@ -1,3 +1,50 @@
-<p>
-  book-registration works!
-</p>
+<form
+  fxLayout="column"
+  fxLayoutGap="10px"
+  [ngStyle]="{width: '400px'}"
+> 
+  <!-- Name -->
+  <mat-form-field>
+    <input 
+      matInput
+      type="text"
+      placeholder="Nome"
+      [formControl]="formGroup.controls.name"
+    >
+    <mat-hint *ngIf="formGroup.controls.name.invalid">
+      <span 
+        *ngIf="(formGroup.controls.name.touched || submitted) && formGroup.controls.name.hasError('required')" 
+        class="validator-error-message"
+      > 
+        Esse campo é obrigatório
+      </span>
+    </mat-hint>
+  </mat-form-field>
+
+  <!-- Name -->
+  <mat-form-field>
+    <input 
+      matInput
+      type="text"
+      placeholder="Descrição"
+      [formControl]="formGroup.controls.description"
+    >
+    <mat-hint *ngIf="formGroup.controls.description.invalid">
+      <span 
+        *ngIf="(formGroup.controls.description.touched || submitted) && formGroup.controls.description.hasError('required')" 
+        class="validator-error-message"
+      > 
+        Esse campo é obrigatório
+      </span>
+    </mat-hint>
+  </mat-form-field>
+
+  <!-- Create Button -->
+  <button
+    mat-raised-button
+    (click)="onCreateButton()"
+  >
+    CADASTRAR
+  </button>
+
+</form>
